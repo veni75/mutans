@@ -1,0 +1,218 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.container {position: relative;
+width: 100vw;
+}
+
+#box-1 {position: absolute;
+  background-color: lightgray;
+  top: 0;
+left: 0;
+width: 15vw;
+  height: 100%;
+}
+
+#box-2 {position: absolute;
+  background-color: lightgray;
+  top: 0;
+  right: 0;
+  width: 85vw;
+    height: 80px;
+}
+
+#box-3 {position: absolute;
+  top: 80px;
+right: 0;
+width: 85vw;
+  background-color: white;
+border: 1px solid blue;}
+
+/* ====Left ASIDE STYLES=====*/
+
+.aside a {
+  display: block;
+}
+
+/* ======= Felső nav style ======= */
+
+.not {color: gray;
+font-family: sans-serif;
+  text-align: center;
+  font-size: .8rem;
+  float: right;
+  padding: .5rem;}
+
+
+.nav1 a{
+  text-decoration: none;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: .8rem;
+  color: blue;
+  float: right;
+  padding: .5rem;
+}
+
+/* Clearfix */
+    .nav1::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+
+
+
+/* ==== Fülek nav style ==== */
+
+.nav2 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: .9rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.nav2 a {
+  line-height: 2rem;
+  height: 2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  }
+
+.active {
+    color: black;
+  background-color: white;
+    }
+
+.passive {
+  background-color: lightblue;
+border: 1px solid blue;}
+  
+.active:hover {
+  text-decoration: none;}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.search {color: gray;
+background-color: white;
+border: 1px solid gray;
+padding: .6rem;}
+
+/* Clearfix */
+    nav::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+
+/* ==== ARTICLE STYLES ==== */
+
+h1 {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 1.7rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#box-5 {
+  background-color: lightgray;
+  border: 1px solid gray;
+  float: right;
+  margin: 10px;
+  padding: .5rem;
+}
+
+#box-5::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+figcaption, img {text-align: center;}
+
+.bold {font-weight: 700;}
+
+td {padding: .2rem;}
+
+.small { font-size: .7rem;
+    font-family: sans-serif;
+}
+
+.normal {
+  font-size: 1rem;
+    font-family: sans-serif;
+  line-height: 1.5rem;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: .8rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#box-4 {
+  display: block;
+  width: 150px;
+  background-color: lightgray;
+  border: 1px solid gray;
+  margin: 1rem;
+  padding: .5rem;
+}
+
+.box-7 {
+  display: block;
+  background-color: lightgray;
+  border: 1px solid gray;
+  margin: 1.5rem;
+  padding: .5rem;
+}
+
+.verti {
+  display: inline;
+  margin: .5rem;
+}
+
+/* ==== FOOTER STYLES ==== */
+
+#box-8 {position: absolute;
+  background-color: lightgray;
+  bottom: 0;
+  right: 0;
+  width: 85vw;}
+
+footer {
+  text-align: left;
+  font-family: sans-serif;
+  font-size: .6rem;
+  padding: 2rem;
+  line-height: 2rem;
+}
+
+.mini {
+  color: black;
+  letter-spacing: .025rem;
+  }
