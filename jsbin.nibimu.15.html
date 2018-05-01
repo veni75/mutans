@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by veni75 (http://jsbin.com/nibimu/15/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="kommunista-mutans-sajat2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+  <title>JS Bin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style id="jsbin-css">
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+ height: 100vh;
+}
+
+#box-1 {
+  background-color: rgba(240,240,240,1);
+  top: 0;
+left: 0;
+width: 200px;
+  padding: 1rem;
+  }
+
+#box-2 {
+  background-color: rgba(240,240,240,1);
+  top: 0;
+  right: 0;
+  width: calc(100vw - 200px);
+    height: 90px;
+  
+}
+
+#box-3 {
+  top: 90px;
+right: 0;
+width: calc(100vw - 202px);
+  background-color: white;
+border: 1px solid blue;
+padding: 2rem;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* Clearfix */
+    .nav1::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+/* ====Left ASIDE STYLES=====*/
+
+figure {
+  margin-bottom: 2rem;
+}
+
+.aside a {
+  display: block;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  margin-top: 2rem;
+  color: darkgray;
+  }
+
+.gray {color: #797979}
+
+.gray:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.cog {opacity: 0.7}
+.cog:hover {opacity: 1}
+
+/* ======= Felső nav style ======= */
+
+.not {color: gray;
+font-family: sans-serif;
+  text-align: center;
+  font-size: .8rem;
+  padding: .5rem;}
+
+
+.nav1 a{
+  text-decoration: none;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: .8rem;
+  color: blue;
+  float: right;
+  padding: .5rem;
+  margin-bottom: 30px;
+}
+
+/* Clearfix 
+    .nav1::after {
+    content: "";
+    clear: both;
+    display: block;
+  }*/
+
+
+
+
+/* ==== Fülek nav style ==== */
+
+.nav2 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: .9rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.nav2 a {
+  line-height: 2rem;
+  height: 2rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  }
+
+.active {
+    color: black;
+  background-color: white;
+    }
+
+.passive {
+ background-color: lightblue;
+  /*background-image: url("gradient_bg.png");
+  background-repeat: repeat-x;*/
+border: 1px solid blue;}
+  
+.active:hover {
+  text-decoration: none;}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.search {color: gray;
+background-color: white;
+border: 1px solid gray;
+padding: .6rem;}
+
+/* Clearfix */
+    nav::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+
+/* ==== ARTICLE STYLES ==== */
+
+h1 {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 1.2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 1.7rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+#box-5 {
+  background-color: rgba(240,240,240,1);
+  border: 1px solid gray;
+  float: right;
+  margin: 10px;
+  padding: .5rem;
+}
+
+#box-5::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+figcaption, img {text-align: center;}
+
+.bold {font-weight: 700;}
+
+td {padding: .2rem;}
+
+#box-10 {
+  background-color: rgba(240,240,240,1);
+  border: 1px solid gray;
+  float: left;
+  margin: 10px;
+  padding: .5rem;
+}
+
+.small { font-size: .7rem;
+    font-family: sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.normal {
+  font-size: 1rem;
+    font-family: sans-serif;
+  line-height: 1.5rem;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: .8rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#box-4 {
+  display: block;
+  width: 150px;
+  background-color: rgba(240,240,240,1);
+  border: 1px solid gray;
+  margin: 1rem;
+  padding: .5rem;
+}
+
+.box-7 {
+  display: block;
+  background-color: rgba(240,240,240,1);
+  border: 1px solid gray;
+  margin-top: 1.5rem;
+  padding: .5rem;
+}
+
+.verti {
+  display: inline;
+  margin: .5rem;
+}
+
+/* ==== FOOTER STYLES ==== */
+
+footer {
+  float: right;
+  background-color: rgba(240,240,240,1);
+  width: calc(100vw - 200px);
+  height: px;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: .6rem;
+  padding: 2rem;
+  line-height: 2rem;
+}
+
+.mini {
+  color: black;
+  letter-spacing: .025rem;
+  }
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+ <div id="box-1" class="box left">
+    <figure id="box-9">
+  <a class="" href="" title="Visit the main page"></a>
+    <img src="" alt="">
+    <figcaption class="small">Wikipedia</figcaption>
+      <figcaption class="bold">The Free Encyclopedia</figcaption>
+      </figure>
+      <nav class="aside">
+     <a href="A" >Privacy policy</a>
+          <a href="A" >About Wikipedia</a>
+          <a href="A" >Disclaimers</a>
+          <a href="A" >Contact Wikipedia</a>
+          <a href="A" >Developers</a>
+          <a href="A" >Cookie statement</a>
+          <a href="A" >Mobile view</a>
+          <a href="A" >Enable previews</a>
+        </nav>
+   <h4>Interaction</h4>
+   <hr>
+   <nav class="aside">
+     <a href="A" >Privacy policy</a>
+          <a href="A" >About Wikipedia</a>
+          <a href="A" >Disclaimers</a>
+          <a href="A" >Contact Wikipedia</a>
+          <a href="A" >Developers</a>
+          </nav>
+   <h4>Tools</h4>
+   <hr>
+   <nav class="aside">
+     <a href="A" >Privacy policy</a>
+          <a href="A" >About Wikipedia</a>
+          <a href="A" >Disclaimers</a>
+          <a href="A" >Contact Wikipedia</a>
+          <a href="A" >Developers</a>
+          <a href="A" >Cookie statement</a>
+          <a href="A" >Mobile view</a>
+          <a href="A" >Enable previews</a>
+        </nav>
+   <h4>Print/export</h4>
+   <hr>
+   <nav class="aside">
+     <a href="A" >Privacy policy</a>
+          <a href="A" >About Wikipedia</a>
+          <a href="A" >Disclaimers</a>
+     </nav>
+   <h4>Languages<i class="fa fa-cog right cog"></i></h4>
+   <hr>
+   <nav class="aside">
+     <a href="A" >Privacy policy</a>
+      <a href="A" class="right gray"><i class="fa fa-edit"></i>Edit links</a>
+        </nav>
+   </div>
+  <div id="box-2" class="box right">
+   <nav class="nav1">
+  <a href="#">Log in</a>
+  <a href="#">Create account</a>
+  <a href="#">Contributions</a>
+  <a href="#">Talk</a>
+    <p class="not right"><i class="fa fa-user"></i>Not logged in</a>
+    </nav>
+
+<nav class="nav2">
+  <a href="#" class="active left">Article</a>
+  <a href="#"class="passive left">Talk</a>
+  <p class="right search">Search Wikipedia<i class="fa fa-search"></i></p>
+  <a href="#" class="passive right">View history</a>
+  <a href="#" class="passive right">Edit</a>
+  <a href="#" class="active right">Read</a>
+  </nav> 
+     </div>
+   <div id="box-3" class="box right">
+<article>
+  <h1>Communist Mutants from Space</h1>
+  <hr>
+  <p class="small">From Wikipedia, the free encyclopedia</p>
+  <figure id="box-5">
+  <figcaption class="bold">Communist Mutants from Space</figcaption>
+    <img src="https://orange.codeberryschool.com/content/images/17-5-communist-mutants-cover.jpg" alt="kommunista mutánsok">
+    <figcaption class="small">Cover art</figcaption>
+    <table>
+  <tr>
+    <td class="bold"><a href="#" title="Video game developer">Developer(s)</a></td>
+    <td>Starpath</td>
+  </tr>
+  <tr>
+    <td class="bold">Programmer(s)</td>
+    <td>Stephen H. Landrum[1]</td>
+  </tr>
+  <tr>
+    <td class="bold">Platform(s)</td>
+    <td>Atari 2600</td>
+  </tr>
+      <tr>
+    <td class="bold">Release</td>
+    <td>NA: 1982</td>
+  </tr>
+  <tr>
+    <td class="bold">Genre(s)</td>
+    <td>Fixed shooter</td>
+  </tr>
+  <tr>
+    <td class="bold">Mode(s)</td>
+    <td>Single-player</td>
+  </tr>
+</table>
+   </figure> 
+  <p class="normal">Communist Mutants from Space is a <a href="#" title="Fixed shooter">fixed shooter</a> video game programmed by Stephen H. Landrum for the <a href="#" title="Atari 2600">Atari 2600</a> with the <a href="#" title="Starpath Supercharger">Starpath Supercharger</a> cassette accessory. It was published in 1982 by <a href="#" title="Starpath">Starpath</a> (formerly Arcadia).[2] The game is a variant of <a href="#" title="Galaxian">Galaxian</a>.[3]</p>
+  <div id="box-4">
+  <h3>Contents [<a href="#">hide</a>]</h3>
+  <ol>
+  <li><a href="#">Story</a></li>
+  <li><a href="#">Gameplay</a>
+    <ol>
+      <li><a href="#">Game menu</a></li>
+      </ol>
+    </li>
+  <li><a href="#">Easter egg</a></li>
+    <li><a href="#">References</a></li>
+    <li><a href="#">External links</a></li>
+    </ol>
+  </div>
+    <h2>Story [edit]</h2>
+    <hr>
+    <p class="normal">Aliens from the communist planet of Rooskee are invading peaceful, democratic planets and turning their inhabitants into "Communist Mutants." The communist mutant armies are controlled by the Mother Creature, a strange alien who has gone mad due to irradiated vodka.</p>
+    <h2>Gameplay [edit]</h2>
+    <hr>
+  <figure id="box-10">
+   <img src="" alt="">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Commiemutants.png/180px-Commiemutants.png">
+    <figcaption class="small">The player must destroy the Mother Creature without being destroyed by the mutants and their bombs.</figcaption> 
+   </figure> 
+    <p class="normal">The player starts off with three reserve cannons. The object is to destroy the mutants aliens and, most importantly, the Mother Creature. The mutants hatch from moving eggs at the top of the screen. Because the Mother Creature replenishes eggs when they hatch or are destroyed, it must be defeated before the player can advance to the next wave. If a mutant or a bomb thrown by a mutant comes into contact with the cannon, the cannon will be destroyed and a reserve must be called up. A new cannon is awarded on every other wave.</p>
+    <h4>Game menu [edit]</h4>
+    
+    <p class="normal">The menu allows a variety of gameplay changes; for example, the player may toggle the shield option on or off. If activated, "shield" mode allowed a player to press down on the joystick to become invincible for a short period (only one shield was allotted per level). Another feature was the "time warp," which allowed the player to press up on the joystick to temporarily slow down the passage of time for his opponents (i.e., they move slower than usual). Additionally, the type of shot fired could be changed by activating the "penetrating fire" option (which enhanced the beam fired so that it could withstand hitting two mutants rather than a single one) and/or the "guided fire" option (which caused the beam to be moved with the joystick rather than firing in a straight line).</p>
+    <p class="normal">The menu also allowed for multiple players (up to four) to be entered into the game. Players one and three shared the first joystick while players two and four shared the second.</p>
+    <h2>Easter egg [edit]</h2>
+    <hr>
+    <p class="normal">Holding fire during power-on of the Atari 2600 causes the "HI" on the high scores screen to change to "SHL", the initials of programmer Stephen H. Landrum. [4]</p>
+    <h2>References [edit]</h2>
+    <hr>
+    <ol>
+  <li>Hague, James. "The Giant List of Classic Game Programmers"</li>
+  <li> I break for Arcadians:Entertainment abounds in a gaggle of games Page 26, InfoWorld, 27 Jun 1983,</li>
+  <li>Brundage, Darryl (June 23, 2005). "Communist Mutants from Space". The Atari Times.</li>
+    <li>Federico, Chris. "The Complete 2600 Easter Egg Archive". Orphaned Computers & Game Systems. Retrieved 2007-12-28.[dead link]</li>
+    </ol>
+    <h2>External links [edit]</h2>
+    <hr>
+    <ul>
+  <li>Communist Mutants from Space at Atari Mania</li>
+  <li>Communist Mutants from Space at AtariAge</li>
+     </ul>
+  <div class="box-7">
+    <a href="https://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories:</a>
+    <a href="https://en.wikipedia.org/wiki/Category:1982_video_games" title="Category:1982 video games">1982 video games</a>
+  <hr class="verti">
+    <a href="https://en.wikipedia.org/wiki/Category:Atari_2600_games" title="Category:Atari 2600 games">Atari 2600 games</a>
+   <hr class="verti">
+    <a href="https://en.wikipedia.org/wiki/Category:Atari_2600-only_games" title="Category:Atari 2600-only games">Atari 2600-only games</a>
+   <hr class="verti">
+    <a href="A" title="Category:Cold War video games">Cold War video games</a>
+   <hr class="verti">
+    <a href="A" title="Category:Fixed shooters">Fixed shooters</a>
+   <hr class="verti">
+    <a href="A" title="Category:North America-exclusive video games">North America-exclusive video games</a>
+   <hr class="verti">
+    <a href="A" title="Category:Starpath games">Starpath games</a>
+   <hr class="verti">
+    <a href="A" title="Category:Video games developed in the United States">Video games developed in the United States</a>
+    </div>
+    </div>
+     
+      <footer id="box-8" class="right">
+       <p class="mini">This page was last edited on 5 April 2018, at 15:22.</p>
+        <p class="mini">Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.</p>
+        <p>
+          <a href="A">Privacy policy</a>
+          <a href="A">About Wikipedia</a>
+          <a href="A">Disclaimers</a>
+          <a href="A">Contact Wikipedia</a>
+          <a href="A">Developers</a>
+          <a href="A">Cookie statement</a>
+          <a href="A">Mobile view</a>
+          <a href="A">Enable previews</a>
+        </p>
+      </footer>
+  </div>
+  
+  </body>
+</html>
